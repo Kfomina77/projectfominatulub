@@ -70,7 +70,7 @@
 .layout-main__article {
   width: 60%;
   background: var(--color-article);
-  color: var(--color-white);
+  color: var(--color-text);
   padding: 1.5rem;
   overflow-y: auto;
 }
@@ -84,7 +84,7 @@
 
 .layout-footer {
   background: var(--color-footer);
-  color: var(--color-white);
+  color: #ffffff;
   height: var(--footer-height);
   min-height: 32px;
   display: flex;

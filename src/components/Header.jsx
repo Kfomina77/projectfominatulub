@@ -13,7 +13,7 @@ export default function Header() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect x="2" y="2" width="36" height="36" rx="4" fill="white" opacity="0.9" />
-          <text x="20" y="26" fontSize="20" textAnchor="middle" fill="#4caf50" fontWeight="bold">&#9749;</text>
+          <text x="20" y="26" fontSize="20" textAnchor="middle" fill="#2e8b57" fontWeight="bold">&#9749;</text>
           <text x="44" y="28" fontSize="18" fill="white" fontWeight="bold">
             {t('page_home_title')}
           </text>

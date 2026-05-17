@@ -14,11 +14,11 @@ export default function Sidebar() {
     <section className="layout-main__section">
       <h3>{t('sidebar_links')}</h3>
       <ul style={{ listStyle: 'none', padding: 0 }}>
-        <li><Link to="/" style={{ color: '#000' }}>{t('nav_home')}</Link></li>
-        <li><Link to="/news" style={{ color: '#000' }}>{t('nav_news')}</Link></li>
-        <li><Link to="/about" style={{ color: '#000' }}>{t('nav_about')}</Link></li>
-        <li><Link to="/feedback" style={{ color: '#000' }}>{t('nav_feedback')}</Link></li>
-        <li><Link to="/products" style={{ color: '#000' }}>{t('nav_products')}</Link></li>
+        <li><Link to="/" style={{ color: '#1a3c34' }}>{t('nav_home')}</Link></li>
+        <li><Link to="/news" style={{ color: '#1a3c34' }}>{t('nav_news')}</Link></li>
+        <li><Link to="/about" style={{ color: '#1a3c34' }}>{t('nav_about')}</Link></li>
+        <li><Link to="/feedback" style={{ color: '#1a3c34' }}>{t('nav_feedback')}</Link></li>
+        <li><Link to="/products" style={{ color: '#1a3c34' }}>{t('nav_products')}</Link></li>
       </ul>
       <h3 style={{ marginTop: '1rem' }}>{t('sidebar_tea_types')}</h3>
       <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -28,7 +28,7 @@ export default function Sidebar() {
       </ul>
       <h3 style={{ marginTop: '1rem' }}>{t('download')}</h3>
       <div style={{ marginTop: '0.5rem' }}>
-        <a href={`/${t('download_file')}`} download style={{ color: '#000', fontSize: '0.9rem' }}>
+        <a href={`/${t('download_file')}`} download style={{ color: '#1a3c34', fontSize: '0.9rem' }}>
           {t('download_file')}
         </a>
       </div>

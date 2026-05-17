@@ -1,11 +1,11 @@
 :root {
-  --color-header: #4caf50;
-  --color-section: #daa520;
-  --color-article: #2196f3;
-  --color-aside: #40e0d0;
-  --color-footer: #f44336;
-  --color-text: #000000;
-  --color-link: #1a0dab;
+  --color-header: #2e8b57;
+  --color-section: #a8e6cf;
+  --color-article: #e0f5ee;
+  --color-aside: #b8ddd3;
+  --color-footer: #3cb371;
+  --color-text: #1a3c34;
+  --color-link: #2e8b57;
   --color-white: #ffffff;
 
   --header-height: 3vh;
