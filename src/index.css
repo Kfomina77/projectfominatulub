@@ -1,0 +1,54 @@
+:root {
+  --color-header: #4caf50;
+  --color-section: #daa520;
+  --color-article: #2196f3;
+  --color-aside: #40e0d0;
+  --color-footer: #f44336;
+  --color-text: #000000;
+  --color-link: #1a0dab;
+  --color-white: #ffffff;
+
+  --header-height: 3vh;
+  --footer-height: 4vh;
+  --main-height: 89vh;
+
+  --font-main: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-white);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 0.5em 0;
+  line-height: 1.5;
+}

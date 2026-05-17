@@ -1,0 +1,136 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-header {
+  background: var(--color-header);
+  height: var(--header-height);
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.layout-header__logo {
+  height: 80%;
+  max-height: 40px;
+}
+
+.layout-header__nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.layout-header__nav a {
+  color: var(--color-white);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.layout-header__lang {
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.layout-header__lang button {
+  background: none;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  padding: 2px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.layout-header__lang button.active {
+  background: var(--color-white);
+  color: var(--color-header);
+}
+
+.layout-main {
+  display: flex;
+  flex: 1;
+  min-height: var(--main-height);
+}
+
+.layout-main__section {
+  width: 20%;
+  background: var(--color-section);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.layout-main__article {
+  width: 60%;
+  background: var(--color-article);
+  color: var(--color-white);
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.layout-main__aside {
+  width: 20%;
+  background: var(--color-aside);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.layout-footer {
+  background: var(--color-footer);
+  color: var(--color-white);
+  height: var(--footer-height);
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+@media (max-width: 800px) {
+  .layout-header {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+    padding: 0.5rem;
+  }
+
+  .layout-header__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .layout-header__lang {
+    position: static;
+    justify-content: center;
+    margin-top: 0.3rem;
+  }
+
+  .layout-main {
+    flex-direction: column;
+  }
+
+  .layout-main__section,
+  .layout-main__article,
+  .layout-main__aside {
+    width: 100%;
+  }
+
+  .layout-footer {
+    flex-direction: column;
+    gap: 0.3rem;
+    height: auto;
+    min-height: auto;
+    padding: 0.5rem;
+  }
+}
