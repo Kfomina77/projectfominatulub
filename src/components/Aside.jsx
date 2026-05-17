@@ -1,9 +1,13 @@
 import { useLang } from '../i18n/LangContext'
 
-export default function Aside() {
-  const { t } = useLang()
+const tagsByLang = {
+  ru: ['Лунцзин', 'Пуэр', 'Улун', 'Сенча', 'Габа', 'Матча', 'Да Хун Пао', 'Чайная церемония'],
+  en: ['Longjing', 'Pu-erh', 'Oolong', 'Sencha', 'GABA', 'Matcha', 'Da Hong Pao', 'Tea ceremony'],
+}
 
-  const tags = ['HTML', 'CSS', 'React', 'SVG', 'Figma', 'UX', 'UI', 'Design']
+export default function Aside() {
+  const { lang, t } = useLang()
+  const tags = tagsByLang[lang] || tagsByLang.ru
 
   return (
     <aside className="layout-main__aside">
@@ -28,7 +32,7 @@ export default function Aside() {
       <div style={{ marginTop: '0.5rem' }}>
         <svg viewBox="0 0 150 60" xmlns="http://www.w3.org/2000/svg" width="100%">
           <rect width="150" height="60" rx="6" fill="#fff" opacity="0.6" />
-          <text x="75" y="35" textAnchor="middle" fontSize="12" fill="#000">Banner</text>
+          <text x="75" y="35" textAnchor="middle" fontSize="12" fill="#000">{t('banner_sale')}</text>
         </svg>
       </div>
     </aside>

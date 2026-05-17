@@ -5,8 +5,8 @@ export default function Footer() {
 
   return (
     <footer className="layout-footer">
-      <span>{t('footer_contacts')}: +7 908 517 50 43</span>
-      <span>{t('footer_creator')}: &copy; 2026</span>
+      <span>{t('footer_contacts')}: {t('page_feedback_phone')} | {t('page_feedback_email')}</span>
+      <span>{t('footer_creator')} &copy; 2010–2026</span>
     </footer>
   )
 }
