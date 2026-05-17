@@ -11,7 +11,7 @@ import './App.css'
 function App() {
   return (
     <LangProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/projectfominatulub">
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
