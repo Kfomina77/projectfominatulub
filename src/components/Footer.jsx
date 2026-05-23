@@ -1,12 +1,51 @@
+import { Link } from 'react-router-dom'
 import { useLang } from '../i18n/LangContext'
+import styles from './Footer.module.css'
 
 export default function Footer() {
   const { t } = useLang()
 
   return (
-    <footer className="layout-footer">
-      <span>{t('footer_contacts')}: {t('page_feedback_phone')} | {t('page_feedback_email')}</span>
-      <span>{t('footer_creator')} &copy; 2026</span>
+    <footer className={styles.footer}>
+      <div className={styles.grid}>
+        <div className={styles.brand}>
+          <div className={styles.brandLogo}>
+            <span className={`material-symbols-outlined ${styles.brandIcon}`}>local_cafe</span>
+            <span className={styles.brandTitle}>{t('page_home_title')}</span>
+          </div>
+          <p className={styles.brandDesc}>{t('footer_desc')}</p>
+          <div className={styles.socials}>
+            <a href="#" className={styles.socialLink} aria-label="Website">
+              <span className="material-symbols-outlined">public</span>
+            </a>
+            <a href="#" className={styles.socialLink} aria-label="Chat">
+              <span className="material-symbols-outlined">chat</span>
+            </a>
+            <a href="#" className={styles.socialLink} aria-label="Email">
+              <span className="material-symbols-outlined">alternate_email</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 className={styles.sectionTitle}>{t('footer_nav')}</h3>
+          <div className={styles.navLinks}>
+            <Link to="/">{t('nav_home')}</Link>
+            <Link to="/products">{t('nav_products')}</Link>
+            <Link to="/news">{t('nav_news')}</Link>
+            <Link to="/about">{t('nav_about')}</Link>
+            <Link to="/feedback">{t('nav_feedback')}</Link>
+          </div>
+        </div>
+        <div>
+          <h3 className={styles.sectionTitle}>{t('footer_contacts')}</h3>
+          <div className={styles.contactInfo}>
+            <p>{t('page_feedback_address')}</p>
+            <p>{t('footer_hours')}</p>
+            <p>{t('page_feedback_phone')}</p>
+          </div>
+          <p className={styles.copyright}>&copy; 2026 {t('footer_creator')}</p>
+        </div>
+      </div>
     </footer>
   )
 }

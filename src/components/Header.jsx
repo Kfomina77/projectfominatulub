@@ -1,45 +1,96 @@
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { useLang } from '../i18n/LangContext'
+import styles from './Header.module.css'
+
+const navItems = [
+  { path: '/', key: 'nav_home' },
+  { path: '/news', key: 'nav_news' },
+  { path: '/about', key: 'nav_about' },
+  { path: '/feedback', key: 'nav_feedback' },
+  { path: '/products', key: 'nav_products' },
+  { path: '/products', key: 'nav_discounts' },
+]
 
 export default function Header() {
   const { lang, setLang, t } = useLang()
+  const location = useLocation()
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [location.pathname])
 
   return (
-    <header className="layout-header">
-      <Link to="/">
-        <svg
-          className="layout-header__logo"
-          viewBox="0 0 120 40"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="2" y="2" width="36" height="36" rx="4" fill="white" opacity="0.9" />
-          <text x="20" y="26" fontSize="20" textAnchor="middle" fill="#2e8b57" fontWeight="bold">&#9749;</text>
-          <text x="44" y="28" fontSize="18" fill="white" fontWeight="bold">
-            {t('page_home_title')}
-          </text>
-        </svg>
-      </Link>
-      <nav className="layout-header__nav">
-        <Link to="/">{t('nav_home')}</Link>
-        <Link to="/news">{t('nav_news')}</Link>
-        <Link to="/about">{t('nav_about')}</Link>
-        <Link to="/feedback">{t('nav_feedback')}</Link>
-        <Link to="/products">{t('nav_products')}</Link>
-      </nav>
-      <div className="layout-header__lang">
-        <button
-          className={lang === 'ru' ? 'active' : ''}
-          onClick={() => setLang('ru')}
-        >
-          {t('lang_ru')}
-        </button>
-        <button
-          className={lang === 'en' ? 'active' : ''}
-          onClick={() => setLang('en')}
-        >
-          {t('lang_en')}
-        </button>
+    <>
+      <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+        <div className={styles.inner}>
+          <Link to="/" className={styles.logo}>
+            <span className={`material-symbols-outlined ${styles.logoIcon}`}>local_cafe</span>
+            <span className={styles.logoText}>{t('page_home_title')}</span>
+          </Link>
+          <nav className={styles.nav}>
+            {navItems.map((item) => (
+              <Link
+                key={item.key}
+                to={item.path}
+                className={location.pathname === item.path ? styles.active : ''}
+              >
+                {t(item.key)}
+              </Link>
+            ))}
+          </nav>
+          <div className={styles.lang}>
+            <button
+              className={`${styles.langBtn} ${lang === 'ru' ? styles.active : ''}`}
+              onClick={() => setLang('ru')}
+            >
+              RU
+            </button>
+            <button
+              className={`${styles.langBtn} ${lang === 'en' ? styles.active : ''}`}
+              onClick={() => setLang('en')}
+            >
+              EN
+            </button>
+          </div>
+          <button className={styles.burger} onClick={() => setMenuOpen(!menuOpen)}>
+            <span className="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </header>
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''}`}>
+        {navItems.map((item) => (
+          <Link
+            key={item.key}
+            to={item.path}
+            className={location.pathname === item.path ? styles.active : ''}
+          >
+            {t(item.key)}
+          </Link>
+        ))}
+        <div className={styles.mobileLang}>
+          <button
+            className={`${styles.langBtn} ${lang === 'ru' ? styles.active : ''}`}
+            onClick={() => setLang('ru')}
+          >
+            RU
+          </button>
+          <button
+            className={`${styles.langBtn} ${lang === 'en' ? styles.active : ''}`}
+            onClick={() => setLang('en')}
+          >
+            EN
+          </button>
+        </div>
       </div>
-    </header>
+    </>
   )
 }

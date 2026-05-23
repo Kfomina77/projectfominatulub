@@ -4,11 +4,35 @@ export default {
   nav_about: 'About',
   nav_feedback: 'Feedback',
   nav_products: 'Products & Services',
+  nav_discounts: 'Discounts',
 
-  page_home_title: 'Tea House',
-  page_home_intro: 'Welcome to our tea shop! We offer the finest teas from around the world: from classic green to rare oolongs and pu-erhs.',
-  page_home_highlight: 'Fresh Darjeeling tea is now in stock!',
-  page_home_cta: 'Browse catalog',
+  page_home_title: 'The Tea Atelier',
+
+  hero_label: 'The art of slowness',
+  hero_title: 'The Art of Mindful Tea',
+  hero_text: 'Immerse yourself in an atmosphere of calm and harmony. We gather the finest teas from around the world, so every cup you brew is filled with meaning.',
+  hero_cta: 'Choose your tea',
+  hero_about: 'About us',
+
+  new_title: 'New Arrivals',
+  new_label: 'Limited Collection',
+  new_name: 'Mountain Purple Yunnan',
+  new_desc: 'A rare tea variety from highland plantations, featuring a unique purple tint in its leaves and a rich antioxidant composition. The flavor reveals notes of forest berries with a light smoky aftertaste.',
+  new_price: '2,450 ₽ / 50g',
+  new_btn: 'Learn more',
+
+  varieties_title: 'Tea Varieties',
+  varieties_desc: 'Our collection includes rare collector\'s specimens and classic blends for daily enjoyment.',
+  varieties_catalog: 'In catalog',
+
+  discounts_title: 'Discounts',
+
+  offer_label: 'Special offer',
+  offer_title: 'Up to 25% off ceremony sets',
+  offer_desc: 'A perfect occasion to begin your journey into the world of tea or give an exquisite gift to loved ones.',
+  offer_btn: 'Buy with discount',
+
+  tags_title: 'Tag Cloud',
 
   page_news_title: 'Fresh harvest 2026!',
   page_news_text: 'A new batch of spring tea from Fujian province has arrived. Longjing, Bi Luo Chun and Tai Ping Hou Kui — harvested in April, now on our shelves.',
@@ -35,13 +59,11 @@ export default {
   page_products_price: 'Price',
   page_products_weight: 'Weight',
 
-  sidebar_links: 'Sections',
-  sidebar_banners: 'Promos',
-  sidebar_tags: 'Tag cloud',
-  sidebar_tea_types: 'Tea types',
-
+  footer_desc: 'A tea workshop where tradition meets modern minimalism. We believe in the quality of every detail.',
+  footer_nav: 'Navigation',
   footer_contacts: 'Contacts',
-  footer_creator: 'Tea House',
+  footer_creator: 'The Tea Atelier',
+  footer_hours: 'Mon–Sun: 10:00 — 22:00',
 
   lang_ru: 'Рус',
   lang_en: 'Eng',

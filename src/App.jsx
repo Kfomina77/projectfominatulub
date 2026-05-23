@@ -6,7 +6,6 @@ import About from './pages/About'
 import Feedback from './pages/Feedback'
 import Products from './pages/Products'
 import { LangProvider } from './i18n/LangContext'
-import './App.css'
 
 function App() {
   return (

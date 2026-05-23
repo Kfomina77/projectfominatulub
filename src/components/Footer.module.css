@@ -1,0 +1,108 @@
+.footer {
+  background: var(--color-surface-container-low);
+  border-top: 1px solid var(--color-outline-variant);
+  padding: var(--spacing-xl) 0;
+}
+
+.grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--margin-desktop);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.brandIcon {
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+.brandTitle {
+  font-family: var(--font-headline);
+  font-size: var(--text-title-lg);
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.brandDesc {
+  font-size: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+  max-width: 280px;
+  margin-top: var(--spacing-sm);
+}
+
+.socials {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.socialLink {
+  color: var(--color-on-surface-variant);
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: var(--color-primary);
+}
+
+.sectionTitle {
+  font-family: var(--font-body);
+  font-size: var(--text-label-md);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.navLinks a {
+  font-size: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.navLinks a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.contactInfo {
+  font-size: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+  line-height: 1.7;
+}
+
+.copyright {
+  font-size: var(--text-body-md);
+  color: var(--color-secondary);
+  margin-top: var(--spacing-md);
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0 var(--margin-mobile);
+    gap: var(--spacing-lg);
+  }
+}

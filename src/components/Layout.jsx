@@ -1,18 +1,13 @@
 import Header from './Header'
 import Footer from './Footer'
-import Sidebar from './Sidebar'
-import Aside from './Aside'
+import styles from './Layout.module.css'
 
 export default function Layout({ children }) {
   return (
-    <div className="layout">
+    <div className={styles.layout}>
       <Header />
-      <main className="layout-main">
-        <Sidebar />
-        <article className="layout-main__article">
-          {children}
-        </article>
-        <Aside />
+      <main className={styles.main}>
+        {children}
       </main>
       <Footer />
     </div>
