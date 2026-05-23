@@ -1,0 +1,214 @@
+.pageHero {
+  position: relative;
+  height: 40vh;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pageHeroImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pageHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 28, 25, 0.55);
+}
+
+.pageHeroContent {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--margin-desktop);
+  width: 100%;
+  color: #fff;
+}
+
+.pageHeroLabel {
+  font-family: var(--font-body);
+  font-size: var(--text-label-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-secondary-fixed);
+  margin-bottom: var(--spacing-xs);
+  display: block;
+}
+
+.pageHeroTitle {
+  font-family: var(--font-headline);
+  font-size: var(--text-display-lg);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--margin-desktop);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.storyImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.storyText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sectionTitle {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  color: var(--color-on-surface);
+  margin-bottom: var(--spacing-md);
+}
+
+.accentLine {
+  width: 64px;
+  height: 4px;
+  background: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.storyDesc {
+  font-size: var(--text-body-lg);
+  color: var(--color-on-surface-variant);
+  line-height: 1.7;
+}
+
+.valuesSection {
+  background: var(--color-surface-container-low);
+}
+
+.valuesInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--margin-desktop);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.valueCard {
+  background: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-outline-variant);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.valueCard:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-hover);
+}
+
+.valueIcon {
+  font-size: 40px;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.valueTitle {
+  font-family: var(--font-body);
+  font-size: var(--text-title-lg);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: var(--spacing-sm);
+}
+
+.valueDesc {
+  font-size: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+}
+
+.factsSection {
+  background: var(--color-surface);
+}
+
+.factsInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--margin-desktop);
+}
+
+.factsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.factCard {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.factNumber {
+  font-family: var(--font-headline);
+  font-size: var(--text-display-lg);
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--spacing-sm);
+}
+
+.factLabel {
+  font-size: var(--text-body-md);
+  color: var(--color-on-surface-variant);
+}
+
+@media (max-width: 800px) {
+  .pageHeroContent {
+    padding: 0 var(--margin-mobile);
+  }
+
+  .section {
+    padding: var(--spacing-lg) var(--margin-mobile);
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .valuesInner {
+    padding: var(--spacing-lg) var(--margin-mobile);
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .factsInner {
+    padding: var(--spacing-lg) var(--margin-mobile);
+  }
+
+  .factsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1100px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

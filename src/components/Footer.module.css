@@ -44,21 +44,6 @@
   margin-top: var(--spacing-sm);
 }
 
-.socials {
-  display: flex;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
-}
-
-.socialLink {
-  color: var(--color-on-surface-variant);
-  transition: color 0.2s;
-}
-
-.socialLink:hover {
-  color: var(--color-primary);
-}
-
 .sectionTitle {
   font-family: var(--font-body);
   font-size: var(--text-label-md);

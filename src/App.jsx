@@ -5,6 +5,7 @@ import News from './pages/News'
 import About from './pages/About'
 import Feedback from './pages/Feedback'
 import Products from './pages/Products'
+import Discounts from './pages/Discounts'
 import { LangProvider } from './i18n/LangContext'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/discounts" element={<Discounts />} />
           </Routes>
         </Layout>
       </BrowserRouter>

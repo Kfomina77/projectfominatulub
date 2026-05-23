@@ -9,7 +9,7 @@ const navItems = [
   { path: '/about', key: 'nav_about' },
   { path: '/feedback', key: 'nav_feedback' },
   { path: '/products', key: 'nav_products' },
-  { path: '/products', key: 'nav_discounts' },
+  { path: '/discounts', key: 'nav_discounts' },
 ]
 
 export default function Header() {
